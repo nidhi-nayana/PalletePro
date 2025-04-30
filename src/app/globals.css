@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-dancing-script), var(--font-geist-sans), sans-serif; /* Use Dancing Script as primary */
+   /* Add a subtle background pattern */
+  background-image: radial-gradient(hsl(var(--muted)) 1px, transparent 1px);
+  background-size: 10px 10px;
+  background-position: center center;
+}
+
+@layer base {
+  :root {
+    --background: 340 67% 94%; /* #FCE4EC */
+    --foreground: 340 82% 70%; /* Darker Muted Pink */ /* Adjusted for better contrast */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 340 82% 65%; /* Slightly Darker Muted Pink */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 340 82% 65%; /* Slightly Darker Muted Pink */
+    --primary: 340 82% 76%; /* #F48FB1 */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 340 67% 96%; /* Lighter Pastel Pink */
+    --secondary-foreground: 340 82% 76%; /* #F48FB1 */
+    --muted: 340 67% 96%; /* Lighter Pastel Pink */
+    --muted-foreground: 340 82% 66%; /* Slightly Darker Muted Pink */
+    --accent: 340 82% 52%; /* #E91E63 */
+    --accent-foreground: 0 0% 100%; /* White */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 67% 90%; /* Lighter Border Pink */
+    --input: 340 67% 90%; /* Lighter Input Pink */
+    --ring: 340 82% 52%; /* #E91E63 */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+     /* Define font variable for Tailwind */
+    --font-dancing-script: "Dancing Script", cursive;
+  }
+  .dark {
+    --background: 340 10% 10%; /* Dark Pinkish Grey */
+    --foreground: 340 67% 94%; /* #FCE4EC */
+    --card: 340 10% 15%; /* Darker Pinkish Grey */
+    --card-foreground: 340 67% 94%; /* #FCE4EC */
+    --popover: 340 10% 15%; /* Darker Pinkish Grey */
+    --popover-foreground: 340 67% 94%; /* #FCE4EC */
+    --primary: 340 67% 94%; /* #FCE4EC */
+    --primary-foreground: 340 82% 52%; /* #E91E63 */
+    --secondary: 340 10% 20%; /* Even Darker Pinkish Grey */
+    --secondary-foreground: 340 67% 94%; /* #FCE4EC */
+    --muted: 340 10% 20%; /* Even Darker Pinkish Grey */
+    --muted-foreground: 340 67% 84%; /* Dimmer Pastel Pink */
+    --accent: 340 82% 62%; /* Lighter Vibrant Rose Pink */
+    --accent-foreground: 340 10% 10%; /* Dark Background for Contrast */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 10% 25%; /* Dark Border */
+    --input: 340 10% 25%; /* Dark Input */
+    --ring: 340 82% 62%; /* Lighter Vibrant Rose Pink */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+     --font-dancing-script: "Dancing Script", cursive;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+   /* Apply sans-serif to specific elements for readability if needed */
+  h1, h2, h3, h4, h5, h6, button, input, select, textarea, label, .font-sans {
+    font-family: var(--font-geist-sans), sans-serif;
+  }
+
+  /* Apply mono font for code/mono elements */
+ .font-mono {
+    font-family: var(--font-geist-mono), monospace;
+  }
+}
